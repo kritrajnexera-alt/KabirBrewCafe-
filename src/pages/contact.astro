@@ -9,13 +9,14 @@ import SteamDivider from '../components/SteamDivider.astro';
 >
   <section class="section contact-hero" aria-labelledby="contact-title">
     <div class="container">
-      <p class="caption">Get in touch</p>
-      <h1 id="contact-title">Find us, call us,<br>come by</h1>
-      <div class="brass-divider"></div>
-      <p class="body-large contact-lede">
-        No online booking system, no chatbot. Just a phone number and a door that&rsquo;s
-        open eleven hours a day.
-      </p>
+      <div class="contact-hero-inner">
+        <h1 id="contact-title">Find us, call us,<br>come by</h1>
+        <div class="brass-divider"></div>
+        <p class="body-large contact-lede">
+          No online booking system, no chatbot. Just a phone number and a door that&rsquo;s
+          open eleven hours a day.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -161,7 +162,10 @@ import SteamDivider from '../components/SteamDivider.astro';
 <style>
   .contact-hero {
     padding-top: 140px;
-    padding-bottom: 24px;
+    padding-bottom: 48px;
+  }
+  .contact-hero-inner {
+    max-width: 640px;
   }
   .contact-lede {
     max-width: 520px;

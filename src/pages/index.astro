@@ -43,12 +43,13 @@ import testimonials from '../data/testimonials.json';
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <div class="hero-visual-glow"></div>
-        <svg class="hero-steam" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M100 180 C85 160 70 170 65 145 C60 120 80 115 85 100 C90 85 75 75 70 55 C65 35 85 25 100 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
-          <path d="M120 175 C110 155 100 165 95 140 C90 115 110 110 115 95 C120 80 105 70 100 50 C95 30 115 20 130 15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.4"/>
-          <path d="M80 178 C70 162 55 168 50 148 C45 128 65 118 70 105 C75 92 60 80 55 62 C50 44 65 30 78 22" stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.3"/>
-        </svg>
+        <div class="hero-image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80"
+            alt=""
+            loading="eager"
+          />
+        </div>
       </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -58,310 +59,325 @@ import testimonials from '../data/testimonials.json';
   </section>
 
   <!-- STORY -->
-  <section class="section" id="story" aria-labelledby="story-title">
-    <div class="container">
-      <div class="story-grid">
-        <div class="story-text">
-          <div class="brass-divider"></div>
-          <h2 id="story-title">
-            A corner of Jin Bazar<br />
-            <span class="story-em">that smells like dough</span>
-          </h2>
-          <p class="body-large">
-            KabirBrewCafe started as a simple idea &mdash; a place where the warmth of a wood-fired oven
-            meets the quiet comfort of a neighbourhood coffee counter. No frills, no fuss. Just properly
-            made pizza, strong coffee, and margaritas that taste like summer.
-          </p>
-          <p class="body-small">
-            Tucked away in Jin Bazar, Netrang, the cafe has become the kind of spot where regulars
-            know the staff by name. The garlic bread comes out golden, the Four Cheese pizza has a
-            loyal following, and the espresso machine runs from 11 AM until the last customer leaves.
-          </p>
-        </div>
-        <div class="story-visual">
-          <div class="story-visual-block">
-            <div class="story-quote">
-              &ldquo;The kind of place you walk into for a coffee<br />
-              and stay for two margaritas and a pizza.&rdquo;
-              <footer>&mdash; regular since 2023</footer>
+  <ScrollReveal delay={1}>
+    <section class="section" id="story" aria-labelledby="story-title">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-text">
+            <div class="brass-divider"></div>
+            <h2 id="story-title">
+              A corner of Jin Bazar<br />
+              <span class="story-em">that smells like dough</span>
+            </h2>
+            <p class="body-large">
+              KabirBrewCafe started as a simple idea &mdash; a place where the warmth of a wood-fired oven
+              meets the quiet comfort of a neighbourhood coffee counter. No frills, no fuss. Just properly
+              made pizza, strong coffee, and margaritas that taste like summer.
+            </p>
+            <p class="body-small">
+              Tucked away in Jin Bazar, Netrang, the cafe has become the kind of spot where regulars
+              know the staff by name. The garlic bread comes out golden, the Four Cheese pizza has a
+              loyal following, and the espresso machine runs from 11 AM until the last customer leaves.
+            </p>
+          </div>
+          <div class="story-visual">
+            <div class="story-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80"
+                alt=""
+                loading="lazy"
+              />
             </div>
-            <div class="story-stats">
-              <div>
-                <div class="caption">Est.</div>
-                <span class="story-stat-value">2022</span>
+            <div class="story-visual-block">
+              <div class="story-quote">
+                &ldquo;The kind of place you walk into for a coffee<br />
+                and stay for two margaritas and a pizza.&rdquo;
+                <footer>&mdash; regular since 2023</footer>
               </div>
-              <div>
-                <div class="caption">Rating</div>
-                <span class="story-stat-value">4.8 ★</span>
-              </div>
-              <div>
-                <div class="caption">Open</div>
-                <span class="story-stat-value">11 AM &ndash; 10 PM</span>
+              <div class="story-stats">
+                <div>
+                  <div class="caption">Est.</div>
+                  <span class="story-stat-value">2022</span>
+                </div>
+                <div>
+                  <div class="caption">Rating</div>
+                  <span class="story-stat-value">4.8 ★</span>
+                </div>
+                <div>
+                  <div class="caption">Open</div>
+                  <span class="story-stat-value">11 AM &ndash; 10 PM</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <SteamDivider />
-  </section>
+      <SteamDivider />
+    </section>
+  </ScrollReveal>
 
   <!-- MENU HIGHLIGHTS -->
-  <section class="section menu-section" id="menu" aria-labelledby="menu-title">
-    <div class="container">
-      <div class="section-header">
-        <p class="caption">What we serve</p>
-        <h2 id="menu-title">The short menu</h2>
-        <div class="brass-divider brass-divider--center"></div>
-        <p class="body-small section-sub">
-          Everything made fresh. Nothing frozen. The dough is rolled by hand each morning.
-        </p>
+  <ScrollReveal delay={1}>
+    <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="menu-title">The short menu</h2>
+          <div class="brass-divider brass-divider--center"></div>
+          <p class="body-small section-sub">
+            Everything made fresh. Nothing frozen. The dough is rolled by hand each morning.
+          </p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <span class="menu-card-category">Pizza</span>
+            <h3>Vegetable Pizza</h3>
+            <p class="menu-desc">Fresh bell peppers, onions, olives, and mushrooms on a wood-fired base with house marinara.</p>
+            <p class="menu-price">₹249</p>
+          </article>
+          <article class="menu-card">
+            <span class="menu-card-category">Pizza</span>
+            <h3>Four Cheese Pizza</h3>
+            <p class="menu-desc">Mozzarella, cheddar, parmesan, and cream cheese &mdash; melted slow over a thin, crispy crust.</p>
+            <p class="menu-price">₹329</p>
+          </article>
+          <article class="menu-card">
+            <span class="menu-card-category">Pizza</span>
+            <h3>Margherita</h3>
+            <p class="menu-desc">San Marzano tomatoes, fresh mozzarella, basil, and a drizzle of olive oil. Simple and perfect.</p>
+            <p class="menu-price">₹219</p>
+          </article>
+          <article class="menu-card">
+            <span class="menu-card-category">Bites</span>
+            <h3>Garlic Bread</h3>
+            <p class="menu-desc">Fresh-baked baguette brushed with garlic butter, toasted with a light herb crust. Served hot.</p>
+            <p class="menu-price">₹129</p>
+          </article>
+          <article class="menu-card">
+            <span class="menu-card-category">Drinks</span>
+            <h3>Coffee</h3>
+            <p class="menu-desc">Espresso, cappuccino, latte, or cold brew. Single-origin beans, pulled fresh per cup.</p>
+            <p class="menu-price">₹99 &ndash; ₹189</p>
+          </article>
+          <article class="menu-card">
+            <span class="menu-card-category">Drinks</span>
+            <h3>Margaritas</h3>
+            <p class="menu-desc">Classic lime, strawberry, or mango. Shaken with ice, rimmed with salt. A Jin Bazar favourite.</p>
+            <p class="menu-price">₹199</p>
+          </article>
+        </div>
+        <div class="menu-cta-wrap">
+          <a href="/menu" class="btn-secondary">View Full Menu</a>
+        </div>
       </div>
-      <div class="menu-grid">
-        <article class="menu-card">
-          <span class="menu-card-category">Pizza</span>
-          <h3>Vegetable Pizza</h3>
-          <p class="menu-desc">Fresh bell peppers, onions, olives, and mushrooms on a wood-fired base with house marinara.</p>
-          <p class="menu-price">₹249</p>
-        </article>
-        <article class="menu-card">
-          <span class="menu-card-category">Pizza</span>
-          <h3>Four Cheese Pizza</h3>
-          <p class="menu-desc">Mozzarella, cheddar, parmesan, and cream cheese &mdash; melted slow over a thin, crispy crust.</p>
-          <p class="menu-price">₹329</p>
-        </article>
-        <article class="menu-card">
-          <span class="menu-card-category">Pizza</span>
-          <h3>Margherita</h3>
-          <p class="menu-desc">San Marzano tomatoes, fresh mozzarella, basil, and a drizzle of olive oil. Simple and perfect.</p>
-          <p class="menu-price">₹219</p>
-        </article>
-        <article class="menu-card">
-          <span class="menu-card-category">Bites</span>
-          <h3>Garlic Bread</h3>
-          <p class="menu-desc">Fresh-baked baguette brushed with garlic butter, toasted with a light herb crust. Served hot.</p>
-          <p class="menu-price">₹129</p>
-        </article>
-        <article class="menu-card">
-          <span class="menu-card-category">Drinks</span>
-          <h3>Coffee</h3>
-          <p class="menu-desc">Espresso, cappuccino, latte, or cold brew. Single-origin beans, pulled fresh per cup.</p>
-          <p class="menu-price">₹99 &ndash; ₹189</p>
-        </article>
-        <article class="menu-card">
-          <span class="menu-card-category">Drinks</span>
-          <h3>Margaritas</h3>
-          <p class="menu-desc">Classic lime, strawberry, or mango. Shaken with ice, rimmed with salt. A Jin Bazar favourite.</p>
-          <p class="menu-price">₹199</p>
-        </article>
-      </div>
-      <div class="menu-cta-wrap">
-        <a href="/menu" class="btn-secondary">View Full Menu</a>
-      </div>
-    </div>
-    <SteamDivider />
-  </section>
+      <SteamDivider />
+    </section>
+  </ScrollReveal>
 
   <!-- WHY PEOPLE COME BACK -->
-  <section class="section" id="reasons" aria-labelledby="reasons-title">
-    <div class="container">
-      <div class="section-header">
-        <p class="caption">Why regulars keep coming back</p>
-        <h2 id="reasons-title">Little things that add up</h2>
-        <div class="brass-divider brass-divider--center"></div>
+  <ScrollReveal delay={1}>
+    <section class="section" id="reasons" aria-labelledby="reasons-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="reasons-title">Little things that add up</h2>
+          <div class="brass-divider brass-divider--center"></div>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Open 11 AM to 10 PM</h3>
+              <p>Walk in any day. No reservations needed &mdash; just show up and we'll find you a seat.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Delivery &amp; takeaway</h3>
+              <p>Call ahead and we'll have your order bagged and ready. Delivery within Netrang &mdash; just ask.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Outdoor seating available</h3>
+              <p>A small courtyard out back where you can sit under the sky with your coffee or margarita.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                <line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Card payments accepted</h3>
+              <p>UPI, cards, and cash. Whatever works for you. No minimum order for card payments.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Clean &amp; hygienic</h3>
+              <p>Open kitchen, visible prep. We take hygiene seriously &mdash; you can see your food being made.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Booking for groups</h3>
+              <p>Planning a get-together? Call ahead and we'll set up the back section for your group.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="why-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Open 11 AM to 10 PM</h3>
-            <p>Walk in any day. No reservations needed &mdash; just show up and we'll find you a seat.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Delivery &amp; takeaway</h3>
-            <p>Call ahead and we'll have your order bagged and ready. Delivery within Netrang &mdash; just ask.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Outdoor seating available</h3>
-            <p>A small courtyard out back where you can sit under the sky with your coffee or margarita.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-              <line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Card payments accepted</h3>
-            <p>UPI, cards, and cash. Whatever works for you. No minimum order for card payments.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Clean &amp; hygienic</h3>
-            <p>Open kitchen, visible prep. We take hygiene seriously &mdash; you can see your food being made.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Booking for groups</h3>
-            <p>Planning a get-together? Call ahead and we'll set up the back section for your group.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <SteamDivider />
-  </section>
+      <SteamDivider />
+    </section>
+  </ScrollReveal>
 
   <!-- TESTIMONIALS -->
-  <section class="section testi-section" id="reviews" aria-labelledby="reviews-title">
-    <div class="container">
-      <div class="section-header">
-        <p class="caption">What regulars say</p>
-        <h2 id="reviews-title">From the people who keep coming back</h2>
-        <div class="brass-divider brass-divider--center"></div>
+  <ScrollReveal delay={1}>
+    <section class="section testi-section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="reviews-title">From the people who keep coming back</h2>
+          <div class="brass-divider brass-divider--center"></div>
+        </div>
+        <div class="testimonial-grid">
+          {testimonials.slice(0, 3).map((t) => (
+            <blockquote class="testimonial-card">
+              <div class="testimonial-stars" aria-hidden="true">{'★'.repeat(t.stars)}</div>
+              <p class="testimonial-text">&ldquo;{t.text}&rdquo;</p>
+              <footer class="testimonial-author">
+                {t.author}
+                <span>{t.detail}</span>
+              </footer>
+            </blockquote>
+          ))}
+        </div>
       </div>
-      <div class="testimonial-grid">
-        {testimonials.slice(0, 3).map((t) => (
-          <blockquote class="testimonial-card">
-            <div class="testimonial-stars" aria-hidden="true">{'★'.repeat(t.stars)}</div>
-            <p class="testimonial-text">&ldquo;{t.text}&rdquo;</p>
-            <footer class="testimonial-author">
-              {t.author}
-              <span>{t.detail}</span>
-            </footer>
-          </blockquote>
-        ))}
-      </div>
-    </div>
-    <SteamDivider />
-  </section>
+      <SteamDivider />
+    </section>
+  </ScrollReveal>
 
   <!-- FIND US -->
-  <section class="section" id="find" aria-labelledby="find-title">
-    <div class="container">
-      <div class="find-grid">
-        <div class="find-details">
-          <h2 id="find-title">Find us</h2>
-          <div class="brass-divider"></div>
-          <p class="body-large">
-            Jin Bazar, Netrang &mdash; right off the main market road. Look for the warm-lit door and the smell of fresh dough.
-          </p>
-          <div>
-            <div class="find-info-item">
-              <div class="find-info-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                </svg>
+  <ScrollReveal delay={1}>
+    <section class="section" id="find" aria-labelledby="find-title">
+      <div class="container">
+        <div class="find-grid">
+          <div class="find-details">
+            <h2 id="find-title">Find us</h2>
+            <div class="brass-divider"></div>
+            <p class="body-large">
+              Jin Bazar, Netrang &mdash; right off the main market road. Look for the warm-lit door and the smell of fresh dough.
+            </p>
+            <div>
+              <div class="find-info-item">
+                <div class="find-info-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Address</h4>
+                  <p>Jin Bazar, Netrang, Gujarat 393150</p>
+                </div>
               </div>
-              <div>
-                <h4>Address</h4>
-                <p>Jin Bazar, Netrang, Gujarat 393150</p>
+              <div class="find-info-item">
+                <div class="find-info-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Hours</h4>
+                  <p>Monday &ndash; Sunday &middot; 11 AM &ndash; 10 PM</p>
+                </div>
+              </div>
+              <div class="find-info-item">
+                <div class="find-info-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Call us</h4>
+                  <a href="tel:+919909040194">+91 99090 40194</a>
+                </div>
               </div>
             </div>
-            <div class="find-info-item">
-              <div class="find-info-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                </svg>
-              </div>
-              <div>
-                <h4>Hours</h4>
-                <p>Monday &ndash; Sunday &middot; 11 AM &ndash; 10 PM</p>
-              </div>
-            </div>
-            <div class="find-info-item">
-              <div class="find-info-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-              </div>
-              <div>
-                <h4>Call us</h4>
-                <a href="tel:+919909040194">+91 99090 40194</a>
-              </div>
+            <div class="find-actions">
+              <a href="tel:+919909040194" class="btn-primary">Call Now</a>
+              <a href="https://wa.me/919909040194" target="_blank" rel="noopener" class="btn-secondary">WhatsApp</a>
             </div>
           </div>
-          <div class="find-actions">
-            <a href="tel:+919909040194" class="btn-primary">Call Now</a>
-            <a href="https://wa.me/919909040194" target="_blank" rel="noopener" class="btn-secondary">WhatsApp</a>
+          <div class="find-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.5!2d73.3!3d21.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDM2JzAwLjAiTiA3M8KwMTgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="KabirBrewCafe location on Google Maps"
+            ></iframe>
           </div>
-        </div>
-        <div class="find-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.5!2d73.3!3d21.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDM2JzAwLjAiTiA3M8KwMTgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="KabirBrewCafe location on Google Maps"
-          ></iframe>
         </div>
       </div>
-    </div>
-    <SteamDivider />
-  </section>
+      <SteamDivider />
+    </section>
+  </ScrollReveal>
 
   <!-- CONTACT -->
-  <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-    <div class="container">
-      <p class="caption">Get in touch</p>
-      <h2 id="contact-title">Reserve a table or order ahead</h2>
-      <p class="body-large contact-sub">Just a call or a WhatsApp message away. We keep it simple.</p>
-      <div class="contact-actions">
-        <a href="tel:+919909040194" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          +91 99090 40194
-        </a>
-        <a href="https://wa.me/919909040194" target="_blank" rel="noopener" class="btn-secondary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-          </svg>
-          Message on WhatsApp
-        </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="btn-secondary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-          </svg>
-          Follow on Instagram
-        </a>
+  <ScrollReveal delay={1}>
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Reserve a table or order ahead</h2>
+        <p class="body-large contact-sub">Just a call or a WhatsApp message away. We keep it simple.</p>
+        <div class="contact-actions">
+          <a href="tel:+919909040194" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            +91 99090 40194
+          </a>
+          <a href="https://wa.me/919909040194" target="_blank" rel="noopener" class="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Message on WhatsApp
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" class="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            Follow on Instagram
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </ScrollReveal>
 </BaseLayout>
 
 <style>
@@ -435,31 +451,17 @@ import testimonials from '../data/testimonials.json';
     align-items: center;
     position: relative;
   }
-  .hero-steam {
-    width: 320px;
-    height: 320px;
-    color: var(--primary);
-    opacity: 0.15;
+  .hero-image-wrap {
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border: 1px solid oklch(from var(--primary) l c h / 0.15);
   }
-  .hero-steam path {
-    stroke-dasharray: 800;
-    stroke-dashoffset: 800;
-    animation: draw-steam 4s ease forwards;
-  }
-  @keyframes draw-steam {
-    to { stroke-dashoffset: 0; }
-  }
-  .hero-visual-glow {
-    position: absolute;
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    background: radial-gradient(circle, oklch(from var(--accent) l c h / 0.15) 0%, transparent 70%);
-    animation: pulse-glow 6s ease-in-out infinite;
-  }
-  @keyframes pulse-glow {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.15); }
+  .hero-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .hero-scroll {
     position: absolute;
@@ -504,8 +506,20 @@ import testimonials from '../data/testimonials.json';
     margin-bottom: 16px;
   }
   .story-visual {
-    position: relative;
-    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .story-image-wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border: 1px solid oklch(from var(--primary) l c h / 0.15);
+  }
+  .story-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .story-visual-block {
     background: linear-gradient(135deg, var(--surface), oklch(0.11 0.008 55));

@@ -8,15 +8,23 @@ import menuData from '../data/menu.json';
   title="Full Menu — Pizza, Coffee, Margaritas"
   description="View the full menu at KabirBrewCafe in Jin Bazar, Netrang. Wood-fired pizzas, garlic bread, coffee, margaritas. Fresh ingredients, fair prices."
 >
-  <section class="section menu-hero" aria-labelledby="menu-title">
+  <section class="menu-hero" aria-labelledby="menu-title">
+    <div class="menu-hero-bg" aria-hidden="true">
+      <img
+        src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1400&q=80"
+        alt=""
+        loading="eager"
+      />
+    </div>
+    <div class="menu-hero-overlay"></div>
     <div class="container">
-      <p class="caption">Made fresh, every day</p>
-      <h1 id="menu-title">The menu</h1>
-      <div class="brass-divider"></div>
-      <p class="body-large menu-lede">
-        Everything rolled, prepped, and cooked to order. Dough made fresh each morning.
-        Prices include all taxes.
-      </p>
+      <div class="menu-hero-content">
+        <h1 id="menu-title">The menu</h1>
+        <p class="body-large menu-lede">
+          Everything rolled, prepped, and cooked to order. Dough made fresh each morning.
+          Prices include all taxes.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -59,8 +67,40 @@ import menuData from '../data/menu.json';
 
 <style>
   .menu-hero {
-    padding-top: 140px;
-    padding-bottom: 48px;
+    position: relative;
+    min-height: 60dvh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .menu-hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .menu-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .menu-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, oklch(0 0 0 / 0.55) 0%, oklch(0 0 0 / 0.35) 50%, oklch(0 0 0 / 0.65) 100%);
+  }
+  .menu-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .menu-hero-content h1 {
+    color: oklch(1 0 0);
+    margin-bottom: 16px;
+  }
+  .menu-hero-content p {
+    color: oklch(0.82 0.01 80);
+    margin: 0 auto;
   }
   .menu-lede {
     max-width: 520px;
@@ -120,7 +160,7 @@ import menuData from '../data/menu.json';
   }
 
   @media (max-width: 768px) {
-    .menu-hero { padding-top: 100px; }
+    .menu-hero { min-height: 50dvh; }
     .menu-full-card { flex-direction: column; gap: 8px; }
     .menu-full-price { align-self: flex-start; }
   }

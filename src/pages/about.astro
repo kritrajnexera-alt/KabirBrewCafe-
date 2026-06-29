@@ -8,11 +8,37 @@ import testimonials from '../data/testimonials.json';
   title="Our Story — KabirBrewCafe, Jin Bazar"
   description="Read the story behind KabirBrewCafe in Jin Bazar, Netrang. Wood-fired pizza, fresh coffee, and a quiet place to meet."
 >
-  <section class="section about-hero" aria-labelledby="about-title">
+  <section class="about-hero" aria-labelledby="about-title">
+    <div class="about-hero-bg" aria-hidden="true">
+      <img
+        src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1400&q=80"
+        alt=""
+        loading="eager"
+      />
+    </div>
+    <div class="about-hero-overlay"></div>
     <div class="container">
-      <p class="caption">The story so far</p>
-      <h1 id="about-title">From an oven<br><span class="about-em">to Jin Bazar</span></h1>
-      <div class="brass-divider"></div>
+      <div class="about-hero-grid">
+        <div class="about-hero-text">
+          <h1 id="about-title">From an oven<br><span class="about-em">to Jin Bazar</span></h1>
+        </div>
+        <div class="about-hero-stats">
+          <div class="about-stat">
+            <span class="about-stat-number">2022</span>
+            <span class="about-stat-label">Year we opened</span>
+          </div>
+          <div class="about-stat-divider" aria-hidden="true"></div>
+          <div class="about-stat">
+            <span class="about-stat-number">572</span>
+            <span class="about-stat-label">Google reviews</span>
+          </div>
+          <div class="about-stat-divider" aria-hidden="true"></div>
+          <div class="about-stat">
+            <span class="about-stat-number">4.8★</span>
+            <span class="about-stat-label">Star rating</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -23,7 +49,7 @@ import testimonials from '../data/testimonials.json';
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
-          <div class="caption" style="margin-bottom:8px;">2022</div>
+          <div class="about-year-marker">2022</div>
           <h2 id="beginning-title">How it started</h2>
           <p class="body-large">
             KabirBrewCafe didn&rsquo;t start with a business plan. It started with an oven &mdash; a
@@ -37,13 +63,12 @@ import testimonials from '../data/testimonials.json';
           </p>
         </div>
         <div class="about-visual">
-          <div class="about-visual-block">
-            <div class="about-number">2022</div>
-            <div class="about-number-label">Year we opened</div>
-            <div class="about-number" style="margin-top:20px;">572</div>
-            <div class="about-number-label">Google reviews</div>
-            <div class="about-number" style="margin-top:20px;">4.8</div>
-            <div class="about-number-label">Star rating</div>
+          <div class="about-image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80"
+              alt=""
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -57,7 +82,6 @@ import testimonials from '../data/testimonials.json';
     <div class="container">
       <div class="about-reversed">
         <div class="about-text">
-          <div class="caption" style="margin-bottom:8px;">What we believe</div>
           <h2 id="food-title">Good ingredients,<br>no shortcuts</h2>
           <p class="body-large">
             The dough is made fresh every morning &mdash; flour, water, salt, yeast, and time. 
@@ -94,7 +118,6 @@ import testimonials from '../data/testimonials.json';
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
-          <div class="caption" style="margin-bottom:8px;">The atmosphere</div>
           <h2 id="space-title">A place you want<br>to stay at</h2>
           <p class="body-large">
             The front room is warm and compact &mdash; a few tables, the open kitchen, 
@@ -110,19 +133,27 @@ import testimonials from '../data/testimonials.json';
         <div class="about-visual">
           <div class="about-features-grid">
             <div class="about-feature">
-              <span class="about-feature-icon" aria-hidden="true">☕</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="about-feature-icon">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+              </svg>
               <span>Fresh coffee daily</span>
             </div>
             <div class="about-feature">
-              <span class="about-feature-icon" aria-hidden="true">🔥</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="about-feature-icon">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+              </svg>
               <span>Wood-fired oven</span>
             </div>
             <div class="about-feature">
-              <span class="about-feature-icon" aria-hidden="true">🌿</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="about-feature-icon">
+                <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
               <span>Courtyard seating</span>
             </div>
             <div class="about-feature">
-              <span class="about-feature-icon" aria-hidden="true">📞</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="about-feature-icon">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
               <span>Call to order</span>
             </div>
           </div>
@@ -136,7 +167,6 @@ import testimonials from '../data/testimonials.json';
   <!-- REVIEWS -->
   <section class="section about-alt" aria-labelledby="reviews-title">
     <div class="container" style="text-align:center;">
-      <div class="caption">What people say</div>
       <h2 id="reviews-title" style="margin-bottom:40px;">A few kind words</h2>
       <div class="about-review-grid">
         {testimonials.slice(0, 3).map((t) => (
@@ -172,14 +202,77 @@ import testimonials from '../data/testimonials.json';
 
 <style>
   .about-hero {
-    padding-top: 140px;
-    padding-bottom: 24px;
+    position: relative;
+    min-height: 55dvh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .about-hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .about-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, oklch(0 0 0 / 0.65) 0%, oklch(0 0 0 / 0.4) 60%, oklch(0 0 0 / 0.55) 100%);
+  }
+  .about-hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .about-hero-text h1 {
+    color: oklch(1 0 0);
   }
   .about-em {
     color: var(--primary);
     font-style: italic;
     font-weight: 400;
   }
+  .about-hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background: oklch(0.14 0.008 55 / 0.7);
+    border: 1px solid oklch(from var(--primary) l c h / 0.2);
+    padding: 40px 32px;
+    backdrop-filter: blur(8px);
+  }
+  .about-stat {
+    text-align: center;
+  }
+  .about-stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .about-stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: oklch(0.7 0.01 80);
+  }
+  .about-stat-divider {
+    width: 1px;
+    height: 48px;
+    background: oklch(from var(--primary) l c h / 0.25);
+    flex-shrink: 0;
+  }
+
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -199,25 +292,24 @@ import testimonials from '../data/testimonials.json';
   .about-text p {
     margin-bottom: 16px;
   }
-  .about-visual-block {
-    background: var(--surface);
-    border: 1px solid oklch(from var(--primary) l c h / 0.15);
-    padding: 48px 40px;
-    text-align: center;
-  }
-  .about-number {
+  .about-year-marker {
     font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 0.875rem;
     color: var(--primary);
-    line-height: 1;
-  }
-  .about-number-label {
-    font-size: 0.75rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--muted);
-    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .about-image-wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border: 1px solid oklch(from var(--primary) l c h / 0.15);
+  }
+  .about-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .about-quote-block {
     background: linear-gradient(135deg, var(--surface), oklch(0.11 0.008 55));
@@ -249,8 +341,8 @@ import testimonials from '../data/testimonials.json';
   }
   .about-feature-icon {
     display: block;
-    font-size: 1.5rem;
-    margin-bottom: 8px;
+    margin: 0 auto 10px;
+    color: var(--primary);
   }
   .about-review-grid {
     display: grid;
@@ -304,13 +396,16 @@ import testimonials from '../data/testimonials.json';
   }
 
   @media (max-width: 1024px) {
+    .about-hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .about-hero-stats { justify-content: center; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .about-reversed { grid-template-columns: 1fr; gap: 40px; direction: ltr; }
     .about-review-grid { grid-template-columns: 1fr 1fr; }
   }
 
   @media (max-width: 768px) {
-    .about-hero { padding-top: 100px; }
+    .about-hero-stats { flex-direction: column; gap: 24px; padding: 32px 24px; }
+    .about-stat-divider { width: 40px; height: 1px; }
     .about-features-grid { grid-template-columns: 1fr 1fr; }
     .about-review-grid { grid-template-columns: 1fr; }
   }

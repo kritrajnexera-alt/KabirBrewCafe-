@@ -3,9 +3,9 @@ const { class: className = '', delay = 0 } = Astro.props;
 const delayClass = delay > 0 ? `reveal-delay-${delay}` : '';
 ---
 
-<span class="reveal {delayClass} {className}" data-reveal>
+<div class="reveal {delayClass} {className}" data-reveal>
   <slot />
-</span>
+</div>
 
 <script>
   const revealEls = document.querySelectorAll('[data-reveal]');
