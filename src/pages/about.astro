@@ -1,0 +1,317 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SteamDivider from '../components/SteamDivider.astro';
+import testimonials from '../data/testimonials.json';
+---
+
+<BaseLayout
+  title="Our Story — KabirBrewCafe, Jin Bazar"
+  description="Read the story behind KabirBrewCafe in Jin Bazar, Netrang. Wood-fired pizza, fresh coffee, and a quiet place to meet."
+>
+  <section class="section about-hero" aria-labelledby="about-title">
+    <div class="container">
+      <p class="caption">The story so far</p>
+      <h1 id="about-title">From an oven<br><span class="about-em">to Jin Bazar</span></h1>
+      <div class="brass-divider"></div>
+    </div>
+  </section>
+
+  <SteamDivider />
+
+  <!-- THE BEGINNING -->
+  <section class="section" aria-labelledby="beginning-title">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="caption" style="margin-bottom:8px;">2022</div>
+          <h2 id="beginning-title">How it started</h2>
+          <p class="body-large">
+            KabirBrewCafe didn&rsquo;t start with a business plan. It started with an oven &mdash; a
+            wood-fired oven that a friend brought back from a trip to Naples, and a question:
+            <em>why isn&rsquo;t there a place in Netrang that does pizza the way it&rsquo;s supposed to taste?</em>
+          </p>
+          <p class="body-small">
+            The answer was: there wasn&rsquo;t. So we built one. A small space in Jin Bazar, a 
+            second-hand espresso machine, and a menu small enough to fit on one page. The first 
+            year was all word of mouth. The second year, word had spread.
+          </p>
+        </div>
+        <div class="about-visual">
+          <div class="about-visual-block">
+            <div class="about-number">2022</div>
+            <div class="about-number-label">Year we opened</div>
+            <div class="about-number" style="margin-top:20px;">572</div>
+            <div class="about-number-label">Google reviews</div>
+            <div class="about-number" style="margin-top:20px;">4.8</div>
+            <div class="about-number-label">Star rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SteamDivider />
+
+  <!-- THE FOOD -->
+  <section class="section about-alt" aria-labelledby="food-title">
+    <div class="container">
+      <div class="about-reversed">
+        <div class="about-text">
+          <div class="caption" style="margin-bottom:8px;">What we believe</div>
+          <h2 id="food-title">Good ingredients,<br>no shortcuts</h2>
+          <p class="body-large">
+            The dough is made fresh every morning &mdash; flour, water, salt, yeast, and time. 
+            The sauce is just San Marzano tomatoes, crushed by hand. The mozzarella is 
+            shredded daily. Nothing comes out of a bag.
+          </p>
+          <p class="body-small">
+            Same goes for the coffee. Single-origin beans, ground to order, pulled shot by shot. 
+            And the margaritas? Fresh lime, good tequila, no syrups. It&rsquo;s not complicated. 
+            It&rsquo;s just doing simple things properly.
+          </p>
+        </div>
+        <div class="about-visual">
+          <div class="about-quote-block">
+            <p class="about-quote-text">
+              &ldquo;Simple things, done properly, every day.&rdquo;
+            </p>
+            <div style="margin-top:24px; border-top:1px solid oklch(from var(--primary) l c h / 0.12); padding-top:20px;">
+              <p class="body-small">
+                That&rsquo;s the whole philosophy. No secret recipes, no gimmicks. 
+                Just a wood-fired oven, good coffee beans, and people who care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SteamDivider />
+
+  <!-- THE SPACE -->
+  <section class="section" aria-labelledby="space-title">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="caption" style="margin-bottom:8px;">The atmosphere</div>
+          <h2 id="space-title">A place you want<br>to stay at</h2>
+          <p class="body-large">
+            The front room is warm and compact &mdash; a few tables, the open kitchen, 
+            the oven glowing in the corner. Out back, there&rsquo;s a small courtyard with 
+            string lights and enough room for groups.
+          </p>
+          <p class="body-small">
+            It&rsquo;s the kind of space where conversations linger. Where the background 
+            noise is clinking glasses and the low hum of the espresso machine. Where 
+            &ldquo;one coffee&rdquo; turns into &ldquo;okay, maybe a margarita too.&rdquo;
+          </p>
+        </div>
+        <div class="about-visual">
+          <div class="about-features-grid">
+            <div class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">☕</span>
+              <span>Fresh coffee daily</span>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">🔥</span>
+              <span>Wood-fired oven</span>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">🌿</span>
+              <span>Courtyard seating</span>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">📞</span>
+              <span>Call to order</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SteamDivider />
+
+  <!-- REVIEWS -->
+  <section class="section about-alt" aria-labelledby="reviews-title">
+    <div class="container" style="text-align:center;">
+      <div class="caption">What people say</div>
+      <h2 id="reviews-title" style="margin-bottom:40px;">A few kind words</h2>
+      <div class="about-review-grid">
+        {testimonials.slice(0, 3).map((t) => (
+          <blockquote class="about-review-card">
+            <div class="testimonial-stars" aria-hidden="true">{'★'.repeat(t.stars)}</div>
+            <p class="about-review-text">&ldquo;{t.text}&rdquo;</p>
+            <footer class="testimonial-author">
+              {t.author}
+              <span>{t.detail}</span>
+            </footer>
+          </blockquote>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <SteamDivider />
+
+  <!-- CTA -->
+  <section class="section" style="text-align:center;" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title" style="margin-bottom:16px;">Come say hello</h2>
+      <p class="body-large" style="max-width:480px; margin:0 auto 28px;">
+        11 AM &ndash; 10 PM. Jin Bazar, Netrang. No reservations needed for small groups.
+      </p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="tel:+919909040194" class="btn-primary">Call +91 99090 40194</a>
+        <a href="/contact" class="btn-secondary">Plan Your Visit</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-hero {
+    padding-top: 140px;
+    padding-bottom: 24px;
+  }
+  .about-em {
+    color: var(--primary);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .about-reversed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    direction: rtl;
+  }
+  .about-reversed > * {
+    direction: ltr;
+  }
+  .about-text p {
+    margin-bottom: 16px;
+  }
+  .about-visual-block {
+    background: var(--surface);
+    border: 1px solid oklch(from var(--primary) l c h / 0.15);
+    padding: 48px 40px;
+    text-align: center;
+  }
+  .about-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+  }
+  .about-number-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .about-quote-block {
+    background: linear-gradient(135deg, var(--surface), oklch(0.11 0.008 55));
+    border: 1px solid oklch(from var(--primary) l c h / 0.15);
+    padding: 48px 40px;
+  }
+  .about-quote-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-style: italic;
+    color: var(--primary);
+    line-height: 1.5;
+  }
+  .about-alt {
+    background: oklch(0.07 0.005 60);
+  }
+  .about-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .about-feature {
+    background: var(--surface);
+    border: 1px solid oklch(from var(--primary) l c h / 0.1);
+    padding: 24px 20px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+  .about-feature-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .about-review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1040px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .about-review-card {
+    background: var(--surface);
+    border: 1px solid oklch(from var(--primary) l c h / 0.1);
+    padding: 32px 28px;
+    position: relative;
+  }
+  .about-review-card::before {
+    content: '\201C';
+    font-family: var(--font-display);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--primary);
+    opacity: 0.15;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+  }
+  .testimonial-stars {
+    color: var(--primary);
+    font-size: 0.8125rem;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+  .about-review-text {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .testimonial-author {
+    font-size: 0.8125rem;
+    color: var(--primary);
+    font-weight: 500;
+  }
+  .testimonial-author span {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  @media (max-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-reversed { grid-template-columns: 1fr; gap: 40px; direction: ltr; }
+    .about-review-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .about-hero { padding-top: 100px; }
+    .about-features-grid { grid-template-columns: 1fr 1fr; }
+    .about-review-grid { grid-template-columns: 1fr; }
+  }
+</style>

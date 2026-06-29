@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Wood-Fired Pizzas",
+    "items": [
+      { "name": "Margherita", "price": "₹219", "desc": "San Marzano tomatoes, fresh mozzarella, basil, olive oil. Wood-fired in 90 seconds." },
+      { "name": "Vegetable Pizza", "price": "₹249", "desc": "Bell peppers, onions, olives, mushrooms on house marinara. The regulars' favourite." },
+      { "name": "Four Cheese Pizza", "price": "₹329", "desc": "Mozzarella, cheddar, parmesan, cream cheese — melted slow over thin crispy crust." },
+      { "name": "Pepperoni Pizza", "price": "₹299", "desc": "Loaded with pepperoni, mozzarella, and our house sauce. Spicy, crispy, done right." }
+    ]
+  },
+  {
+    "category": "Bites & Sides",
+    "items": [
+      { "name": "Garlic Bread", "price": "₹129", "desc": "Fresh-baked baguette, garlic butter, light herb crust. Served hot with marinara dip." },
+      { "name": "Cheese Garlic Bread", "price": "₹179", "desc": "Same garlic bread, topped with melted mozzarella and a sprinkle of oregano." },
+      { "name": "French Fries", "price": "₹99", "desc": "Double-fried, crispy outside, fluffy inside. Served with ketchup or mayo." },
+      { "name": "Nachos", "price": "₹199", "desc": "Corn chips topped with cheese sauce, salsa, olives, and fresh cream. Shareable." }
+    ]
+  },
+  {
+    "category": "Coffee & Drinks",
+    "items": [
+      { "name": "Espresso", "price": "₹99", "desc": "Single-origin beans, pulled fresh per cup. Short, strong, honest." },
+      { "name": "Cappuccino", "price": "₹129", "desc": "Espresso with steamed milk and thick foam. A morning essential." },
+      { "name": "Cold Brew", "price": "₹149", "desc": "12-hour steeped, served over ice. Smooth, never bitter." },
+      { "name": "Latte", "price": "₹149", "desc": "Espresso with slow-poured steamed milk. Available hot or iced." },
+      { "name": "Masala Chai", "price": "₹89", "desc": "Ginger, cardamom, cinnamon — brewed the way it should be. Good with everything." }
+    ]
+  },
+  {
+    "category": "Margaritas",
+    "items": [
+      { "name": "Classic Lime", "price": "₹199", "desc": "Tequila, fresh lime, triple sec. Shaken with ice, rimmed with salt. The original." },
+      { "name": "Strawberry", "price": "₹229", "desc": "Fresh strawberry purée meets classic margarita. Sweet, tangy, dangerous." },
+      { "name": "Mango", "price": "₹229", "desc": "Alphonso mango pulp blended into a clean margarita. Jin Bazar's favourite." }
+    ]
+  }
+]

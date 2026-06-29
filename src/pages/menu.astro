@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SteamDivider from '../components/SteamDivider.astro';
+import menuData from '../data/menu.json';
+---
+
+<BaseLayout
+  title="Full Menu — Pizza, Coffee, Margaritas"
+  description="View the full menu at KabirBrewCafe in Jin Bazar, Netrang. Wood-fired pizzas, garlic bread, coffee, margaritas. Fresh ingredients, fair prices."
+>
+  <section class="section menu-hero" aria-labelledby="menu-title">
+    <div class="container">
+      <p class="caption">Made fresh, every day</p>
+      <h1 id="menu-title">The menu</h1>
+      <div class="brass-divider"></div>
+      <p class="body-large menu-lede">
+        Everything rolled, prepped, and cooked to order. Dough made fresh each morning.
+        Prices include all taxes.
+      </p>
+    </div>
+  </section>
+
+  {menuData.map((section, si) => (
+    <section class={`section ${si % 2 === 0 ? '' : 'menu-alt-section'}`} aria-labelledby={`cat-${si}`}>
+      <div class="container">
+        <div class="menu-category-header">
+          <div class="brass-divider"></div>
+          <h2 id={`cat-${si}`}>{section.category}</h2>
+        </div>
+        <div class="menu-full-grid">
+          {section.items.map((item) => (
+            <article class="menu-full-card">
+              <div class="menu-full-info">
+                <h3>{item.name}</h3>
+                <p class="menu-desc">{item.desc}</p>
+              </div>
+              <span class="menu-full-price">{item.price}</span>
+            </article>
+          ))}
+        </div>
+      </div>
+      {si < menuData.length - 1 && <SteamDivider />}
+    </section>
+  ))}
+
+  <section class="section menu-cta-section" aria-labelledby="cta-title">
+    <div class="container" style="text-align:center;">
+      <h2 id="cta-title" style="margin-bottom:16px;">Hungry?</h2>
+      <p class="body-large" style="max-width:480px; margin:0 auto 28px;">
+        Call ahead and we&rsquo;ll have it ready. Delivery within Netrang &mdash; just ask.
+      </p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="tel:+919909040194" class="btn-primary">Call to Order</a>
+        <a href="https://wa.me/919909040194" target="_blank" rel="noopener" class="btn-secondary">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .menu-hero {
+    padding-top: 140px;
+    padding-bottom: 48px;
+  }
+  .menu-lede {
+    max-width: 520px;
+  }
+  .menu-alt-section {
+    background: oklch(0.07 0.005 60);
+  }
+  .menu-category-header {
+    margin-bottom: 32px;
+  }
+  .menu-category-header h2 {
+    color: var(--primary);
+  }
+  .menu-full-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    max-width: 700px;
+    background: oklch(from var(--primary) l c h / 0.08);
+    border: 1px solid oklch(from var(--primary) l c h / 0.1);
+  }
+  .menu-full-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 20px 24px;
+    background: var(--surface);
+    transition: background 0.2s ease;
+  }
+  .menu-full-card:hover {
+    background: oklch(0.16 0.008 55);
+  }
+  .menu-full-info h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .menu-full-info .menu-desc {
+    font-size: 0.8125rem;
+    color: var(--muted);
+    line-height: 1.5;
+    max-width: 50ch;
+  }
+  .menu-full-price {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    color: var(--primary);
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .menu-cta-section {
+    background: oklch(0.07 0.005 60);
+  }
+
+  @media (max-width: 768px) {
+    .menu-hero { padding-top: 100px; }
+    .menu-full-card { flex-direction: column; gap: 8px; }
+    .menu-full-price { align-self: flex-start; }
+  }
+</style>
