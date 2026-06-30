@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SteamDivider from '../components/SteamDivider.astro';
-import ScrollReveal from '../components/ScrollReveal.astro';
 import testimonials from '../data/testimonials.json';
 ---
 
 <BaseLayout
   title="Pizza, Coffee & Margaritas in Jin Bazar, Netrang"
   description="4.8★ rated cafe in Jin Bazar, Netrang. Wood-fired pizza, fresh coffee, margaritas. Open 11 AM – 10 PM. Call +91 99090 40194."
+  currentPath={Astro.url.pathname}
 >
   <!-- HERO -->
   <section class="hero" aria-label="KabirBrewCafe hero">
@@ -28,8 +28,8 @@ import testimonials from '../data/testimonials.json';
           Jin Bazar's hidden spot for a slow evening or a quick pick-me-up.
         </p>
         <div class="hero-actions">
-          <a href="tel:+919909040194" class="btn-primary">
-            Call +91 99090 40194
+          <a href="/menu" class="btn-primary">
+            Explore Our Menu
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M1 7h10.5M7.5 2.5L12 7l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -59,123 +59,118 @@ import testimonials from '../data/testimonials.json';
   </section>
 
   <!-- STORY -->
-  <ScrollReveal delay={1}>
-    <section class="section" id="story" aria-labelledby="story-title">
-      <div class="container">
-        <div class="story-grid">
-          <div class="story-text">
-            <div class="brass-divider"></div>
-            <h2 id="story-title">
-              A corner of Jin Bazar<br />
-              <span class="story-em">that smells like dough</span>
-            </h2>
-            <p class="body-large">
-              KabirBrewCafe started as a simple idea &mdash; a place where the warmth of a wood-fired oven
-              meets the quiet comfort of a neighbourhood coffee counter. No frills, no fuss. Just properly
-              made pizza, strong coffee, and margaritas that taste like summer.
-            </p>
-            <p class="body-small">
-              Tucked away in Jin Bazar, Netrang, the cafe has become the kind of spot where regulars
-              know the staff by name. The garlic bread comes out golden, the Four Cheese pizza has a
-              loyal following, and the espresso machine runs from 11 AM until the last customer leaves.
-            </p>
-          </div>
-          <div class="story-visual">
-            <div class="story-image-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80"
-                alt=""
-                loading="lazy"
-              />
-            </div>
-            <div class="story-visual-block">
-              <div class="story-quote">
-                &ldquo;The kind of place you walk into for a coffee<br />
-                and stay for two margaritas and a pizza.&rdquo;
-                <footer>&mdash; regular since 2023</footer>
-              </div>
-              <div class="story-stats">
-                <div>
-                  <div class="caption">Est.</div>
-                  <span class="story-stat-value">2022</span>
-                </div>
-                <div>
-                  <div class="caption">Rating</div>
-                  <span class="story-stat-value">4.8 ★</span>
-                </div>
-                <div>
-                  <div class="caption">Open</div>
-                  <span class="story-stat-value">11 AM &ndash; 10 PM</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <SteamDivider />
-    </section>
-  </ScrollReveal>
-
-  <!-- MENU HIGHLIGHTS -->
-  <ScrollReveal delay={1}>
-    <section class="section menu-section" id="menu" aria-labelledby="menu-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="menu-title">The short menu</h2>
-          <div class="brass-divider brass-divider--center"></div>
-          <p class="body-small section-sub">
-            Everything made fresh. Nothing frozen. The dough is rolled by hand each morning.
+  <section class="section story-section" id="story" aria-labelledby="story-title">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text fade-in-left">
+          <div class="brass-divider"></div>
+          <h2 id="story-title">
+            A corner of Jin Bazar<br />
+            <span class="story-em">that smells like dough</span>
+          </h2>
+          <p class="body-large">
+            KabirBrewCafe started as a simple idea &mdash; a place where the warmth of a wood-fired oven
+            meets the quiet comfort of a neighbourhood coffee counter. No frills, no fuss. Just properly
+            made pizza, strong coffee, and margaritas that taste like summer.
+          </p>
+          <p class="body-small">
+            Tucked away in Jin Bazar, Netrang, the cafe has become the kind of spot where regulars
+            know the staff by name. The garlic bread comes out golden, the Four Cheese pizza has a
+            loyal following, and the espresso machine runs from 11 AM until the last customer leaves.
           </p>
         </div>
-        <div class="menu-grid">
-          <article class="menu-card">
-            <span class="menu-card-category">Pizza</span>
-            <h3>Vegetable Pizza</h3>
-            <p class="menu-desc">Fresh bell peppers, onions, olives, and mushrooms on a wood-fired base with house marinara.</p>
-            <p class="menu-price">₹249</p>
-          </article>
-          <article class="menu-card">
-            <span class="menu-card-category">Pizza</span>
-            <h3>Four Cheese Pizza</h3>
-            <p class="menu-desc">Mozzarella, cheddar, parmesan, and cream cheese &mdash; melted slow over a thin, crispy crust.</p>
-            <p class="menu-price">₹329</p>
-          </article>
-          <article class="menu-card">
-            <span class="menu-card-category">Pizza</span>
-            <h3>Margherita</h3>
-            <p class="menu-desc">San Marzano tomatoes, fresh mozzarella, basil, and a drizzle of olive oil. Simple and perfect.</p>
-            <p class="menu-price">₹219</p>
-          </article>
-          <article class="menu-card">
-            <span class="menu-card-category">Bites</span>
-            <h3>Garlic Bread</h3>
-            <p class="menu-desc">Fresh-baked baguette brushed with garlic butter, toasted with a light herb crust. Served hot.</p>
-            <p class="menu-price">₹129</p>
-          </article>
-          <article class="menu-card">
-            <span class="menu-card-category">Drinks</span>
-            <h3>Coffee</h3>
-            <p class="menu-desc">Espresso, cappuccino, latte, or cold brew. Single-origin beans, pulled fresh per cup.</p>
-            <p class="menu-price">₹99 &ndash; ₹189</p>
-          </article>
-          <article class="menu-card">
-            <span class="menu-card-category">Drinks</span>
-            <h3>Margaritas</h3>
-            <p class="menu-desc">Classic lime, strawberry, or mango. Shaken with ice, rimmed with salt. A Jin Bazar favourite.</p>
-            <p class="menu-price">₹199</p>
-          </article>
-        </div>
-        <div class="menu-cta-wrap">
-          <a href="/menu" class="btn-secondary">View Full Menu</a>
+        <div class="story-visual fade-in-right">
+          <div class="story-image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="story-visual-block">
+            <div class="story-quote">
+              &ldquo;The kind of place you walk into for a coffee<br />
+              and stay for two margaritas and a pizza.&rdquo;
+              <footer>&mdash; regular since 2023</footer>
+            </div>
+            <div class="story-stats">
+              <div>
+                <div class="caption">Est.</div>
+                <span class="story-stat-value">2022</span>
+              </div>
+              <div>
+                <div class="caption">Rating</div>
+                <span class="story-stat-value">4.8 ★</span>
+              </div>
+              <div>
+                <div class="caption">Open</div>
+                <span class="story-stat-value">11 AM &ndash; 10 PM</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <SteamDivider />
-    </section>
-  </ScrollReveal>
+    </div>
+    <SteamDivider />
+  </section>
+
+  <!-- MENU HIGHLIGHTS -->
+  <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="menu-title">The short menu</h2>
+        <div class="brass-divider brass-divider--center"></div>
+        <p class="body-small section-sub">
+          Everything made fresh. Nothing frozen. The dough is rolled by hand each morning.
+        </p>
+      </div>
+      <div class="menu-grid stagger-grid">
+        <article class="menu-card" style="--i:0">
+          <span class="menu-card-category">Pizza</span>
+          <h3>Vegetable Pizza</h3>
+          <p class="menu-desc">Fresh bell peppers, onions, olives, and mushrooms on a wood-fired base with house marinara.</p>
+          <p class="menu-price">₹249</p>
+        </article>
+        <article class="menu-card" style="--i:1">
+          <span class="menu-card-category">Pizza</span>
+          <h3>Four Cheese Pizza</h3>
+          <p class="menu-desc">Mozzarella, cheddar, parmesan, and cream cheese &mdash; melted slow over a thin, crispy crust.</p>
+          <p class="menu-price">₹329</p>
+        </article>
+        <article class="menu-card" style="--i:2">
+          <span class="menu-card-category">Pizza</span>
+          <h3>Margherita</h3>
+          <p class="menu-desc">San Marzano tomatoes, fresh mozzarella, basil, and a drizzle of olive oil. Simple and perfect.</p>
+          <p class="menu-price">₹219</p>
+        </article>
+        <article class="menu-card" style="--i:3">
+          <span class="menu-card-category">Bites</span>
+          <h3>Garlic Bread</h3>
+          <p class="menu-desc">Fresh-baked baguette brushed with garlic butter, toasted with a light herb crust. Served hot.</p>
+          <p class="menu-price">₹129</p>
+        </article>
+        <article class="menu-card" style="--i:4">
+          <span class="menu-card-category">Drinks</span>
+          <h3>Coffee</h3>
+          <p class="menu-desc">Espresso, cappuccino, latte, or cold brew. Single-origin beans, pulled fresh per cup.</p>
+          <p class="menu-price">₹99 &ndash; ₹189</p>
+        </article>
+        <article class="menu-card" style="--i:5">
+          <span class="menu-card-category">Drinks</span>
+          <h3>Margaritas</h3>
+          <p class="menu-desc">Classic lime, strawberry, or mango. Shaken with ice, rimmed with salt. A Jin Bazar favourite.</p>
+          <p class="menu-price">₹199</p>
+        </article>
+      </div>
+      <div class="menu-cta-wrap">
+        <a href="/menu" class="btn-secondary">View Full Menu</a>
+      </div>
+    </div>
+    <SteamDivider />
+  </section>
 
   <!-- WHY PEOPLE COME BACK -->
-  <ScrollReveal delay={1}>
-    <section class="section" id="reasons" aria-labelledby="reasons-title">
+  <section class="section" id="reasons" aria-labelledby="reasons-title">
       <div class="container">
         <div class="section-header">
           <h2 id="reasons-title">Little things that add up</h2>
@@ -254,11 +249,9 @@ import testimonials from '../data/testimonials.json';
       </div>
       <SteamDivider />
     </section>
-  </ScrollReveal>
 
   <!-- TESTIMONIALS -->
-  <ScrollReveal delay={1}>
-    <section class="section testi-section" id="reviews" aria-labelledby="reviews-title">
+  <section class="section testi-section" id="reviews" aria-labelledby="reviews-title">
       <div class="container">
         <div class="section-header">
           <h2 id="reviews-title">From the people who keep coming back</h2>
@@ -279,11 +272,9 @@ import testimonials from '../data/testimonials.json';
       </div>
       <SteamDivider />
     </section>
-  </ScrollReveal>
 
   <!-- FIND US -->
-  <ScrollReveal delay={1}>
-    <section class="section" id="find" aria-labelledby="find-title">
+  <section class="section" id="find" aria-labelledby="find-title">
       <div class="container">
         <div class="find-grid">
           <div class="find-details">
@@ -328,8 +319,8 @@ import testimonials from '../data/testimonials.json';
               </div>
             </div>
             <div class="find-actions">
-              <a href="tel:+919909040194" class="btn-primary">Call Now</a>
-              <a href="https://wa.me/919909040194" target="_blank" rel="noopener" class="btn-secondary">WhatsApp</a>
+              <a href="https://maps.google.com/?q=Jin+Bazar+Netrang+Gujarat+393150" target="_blank" rel="noopener" class="btn-primary">Get Directions</a>
+              <a href="tel:+919909040194" class="btn-secondary">Call +91 99090 40194</a>
             </div>
           </div>
           <div class="find-map">
@@ -345,20 +336,19 @@ import testimonials from '../data/testimonials.json';
       </div>
       <SteamDivider />
     </section>
-  </ScrollReveal>
 
   <!-- CONTACT -->
-  <ScrollReveal delay={1}>
-    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+  <section class="section contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <h2 id="contact-title">Reserve a table or order ahead</h2>
         <p class="body-large contact-sub">Just a call or a WhatsApp message away. We keep it simple.</p>
         <div class="contact-actions">
-          <a href="tel:+919909040194" class="btn-primary">
+          <a href="/contact" class="btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M9 12l2 2 4-4"/>
             </svg>
-            +91 99090 40194
+            Book a Table
           </a>
           <a href="https://wa.me/919909040194" target="_blank" rel="noopener" class="btn-secondary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -377,7 +367,6 @@ import testimonials from '../data/testimonials.json';
         </div>
       </div>
     </section>
-  </ScrollReveal>
 </BaseLayout>
 
 <style>
@@ -831,5 +820,53 @@ import testimonials from '../data/testimonials.json';
     .why-grid { grid-template-columns: 1fr; gap: 24px; }
     .testimonial-grid { grid-template-columns: 1fr; max-width: 480px; }
     .find-map { height: 260px; }
+  }
+
+  /* ─── ANIMATIONS ─── */
+  .hero-image-wrap {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: hero-image-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  }
+  @keyframes hero-image-in {
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .stagger-grid > .menu-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: card-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: calc(var(--i, 0) * 80ms);
+  }
+  @keyframes card-in {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in-left {
+    opacity: 0;
+    transform: translateX(-24px);
+    animation: fade-left 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  }
+  .fade-in-right {
+    opacity: 0;
+    transform: translateX(24px);
+    animation: fade-right 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  }
+  @keyframes fade-left {
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fade-right {
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-image-wrap,
+    .stagger-grid > .menu-card,
+    .fade-in-left,
+    .fade-in-right {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
   }
 </style>

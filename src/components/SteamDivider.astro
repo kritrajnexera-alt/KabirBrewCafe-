@@ -2,10 +2,23 @@
 const { class: className = '' } = Astro.props;
 ---
 
-<div class="steam-divider {className}" aria-hidden="true">
+<div class:list={['steam-divider', className]} aria-hidden="true">
   <svg viewBox="0 0 80 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round">
-    <path d="M10 20 C15 10 20 15 25 8 C30 1 35 6 40 2" opacity="0.5"/>
-    <path d="M30 20 C35 12 40 16 45 10 C50 4 55 8 60 4" opacity="0.35"/>
-    <path d="M50 22 C55 14 58 17 62 12 C66 7 70 10 74 6" opacity="0.2"/>
+    <path class="steam-path-1" d="M10 20 C15 10 20 15 25 8 C30 1 35 6 40 2" opacity="0.5"/>
+    <path class="steam-path-2" d="M30 20 C35 12 40 16 45 10 C50 4 55 8 60 4" opacity="0.35"/>
+    <path class="steam-path-3" d="M50 22 C55 14 58 17 62 12 C66 7 70 10 74 6" opacity="0.2"/>
   </svg>
 </div>
+
+<style>
+  .steam-path-1 { stroke-dasharray: 60; stroke-dashoffset: 60; animation: draw-steam 1.5s ease-out 0.1s forwards; }
+  .steam-path-2 { stroke-dasharray: 50; stroke-dashoffset: 50; animation: draw-steam 1.2s ease-out 0.3s forwards; }
+  .steam-path-3 { stroke-dasharray: 40; stroke-dashoffset: 40; animation: draw-steam 1s ease-out 0.5s forwards; }
+  @keyframes draw-steam { to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .steam-path-1, .steam-path-2, .steam-path-3 {
+      stroke-dashoffset: 0;
+      animation: none;
+    }
+  }
+</style>

@@ -6,9 +6,12 @@ import Footer from '../components/Footer.astro';
 export interface Props {
   title: string;
   description: string;
+  currentPath?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, currentPath = '/' } = Astro.props;
+const siteName = 'KabirBrewCafe';
+const fullTitle = `${title} — ${siteName}`;
 ---
 
 <!DOCTYPE html>
@@ -16,8 +19,19 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} — KabirBrewCafe</title>
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
+
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://kabirbrewcafe.com${currentPath}`} />
+    <meta property="og:site_name" content={siteName} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,10 +40,31 @@ const { title, description } = Astro.props;
     />
   </head>
   <body>
-    <Nav />
-    <main>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <Nav currentPath={currentPath} />
+    <main id="main-content">
       <slot />
     </main>
     <Footer />
   </body>
 </html>
+
+<style>
+  .skip-link {
+    position: fixed;
+    top: -100%;
+    left: 16px;
+    z-index: 200;
+    padding: 12px 24px;
+    background: var(--primary);
+    color: oklch(0.1 0.005 60);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 0 0 8px 8px;
+    text-decoration: none;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+</style>

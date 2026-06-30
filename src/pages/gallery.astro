@@ -21,6 +21,7 @@ const images = [
 <BaseLayout
   title="Gallery — Cafe Atmosphere &amp; Food"
   description="Browse photos of KabirBrewCafe in Jin Bazar, Netrang. Wood-fired pizzas, coffee, margaritas, and our outdoor courtyard."
+  currentPath={Astro.url.pathname}
 >
   <section class="gallery-hero" aria-labelledby="gallery-title">
     <div class="gallery-hero-bg" aria-hidden="true">
@@ -62,14 +63,14 @@ const images = [
   </section>
 
   <section class="section gallery-cta-section" aria-labelledby="visit-title">
-    <div class="container" style="text-align:center;">
-      <h2 id="visit-title" style="margin-bottom:16px;">Come see it yourself</h2>
-      <p class="body-large" style="max-width:480px; margin:0 auto 28px;">
+    <div class="container">
+      <h2 id="visit-title" class="cta-heading">Come see it yourself</h2>
+      <p class="body-large cta-lede">
         Jin Bazar, Netrang. 11 AM to 10 PM. Walk in anytime.
       </p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="/contact" class="btn-primary">Find Us</a>
-        <a href="tel:+919909040194" class="btn-secondary">Call +91 99090 40194</a>
+      <div class="cta-actions">
+        <a href="/contact" class="btn-primary">Reserve a Table</a>
+        <a href="https://maps.google.com/?q=Jin+Bazar+Netrang+Gujarat+393150" target="_blank" rel="noopener" class="btn-secondary">Get Directions</a>
       </div>
     </div>
   </section>
@@ -91,6 +92,14 @@ const images = [
     width: 100%;
     height: 100%;
     object-fit: cover;
+    animation: hero-zoom 6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes hero-zoom {
+    from { transform: scale(1.05); }
+    to { transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-hero-bg img { animation: none; transform: none; }
   }
   .gallery-hero-overlay {
     position: absolute;
@@ -149,7 +158,11 @@ const images = [
   }
   .gallery-cta-section {
     background: oklch(0.07 0.005 60);
+    text-align: center;
   }
+  .cta-heading { margin-bottom: 16px; }
+  .cta-lede { max-width: 480px; margin: 0 auto 28px; }
+  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
   @media (max-width: 768px) {
     .gallery-hero { min-height: 45dvh; }

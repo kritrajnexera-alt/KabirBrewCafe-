@@ -3,7 +3,7 @@ const { class: className = '', delay = 0 } = Astro.props;
 const delayClass = delay > 0 ? `reveal-delay-${delay}` : '';
 ---
 
-<div class="reveal {delayClass} {className}" data-reveal>
+<div class:list={['reveal', delayClass, className]} data-reveal>
   <slot />
 </div>
 
